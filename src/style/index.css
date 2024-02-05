@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(106, 99, 99);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(106, 99, 99);
+    height: 80px;
+    border-bottom: 2px solid white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: white;
+    padding: 0 100px;
+    align-items: center;
+    z-index: 9999;
+}
+
+.header .utils {
+    display: flex;
+    justify-content: right;
+    gap: 50px;
+}
+
+
+.header .utils .header-link {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    transition: all 0.5s ease;
+}
+
+.header .utils .header-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px; 
+    bottom: -5px; 
+    left: 50%;
+    background-color: white; 
+    transition: width 0.5s ease, left 0.5s ease; 
+}
+
+.header .utils .header-link:hover::after {
+    width: 100%; 
+    left: 0; 
+}
+
+.header .logo {
+    display: flex;
+}
+
+.header .logo .header-text
+{
+    font-size: 36px;
+    font-weight: 900;
+}
+
+
+
+.header .search {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.header .search .search-input
+{
+    background-color: white;
+    border: none;
+    height: 40px;
+    width: 500px;
+    padding-left: 40px;
+    border-radius: 15px;
+    color: rgb(106, 99, 99);
+    font-size: 20px;
+}
+.header .search .search-icon 
+{
+    font-size: 20px;
+    position: absolute;
+    left: 10px;
+    color: rgb(106, 99, 99);
+    background-color: white;
+}
+.header .search .search-input:focus
+{
+    outline: none;
+}
+
+
+
+
+
+.main{
+    padding-top: 80px;
+}
+
+.main .main-img
+{
+    width: 100%; /* Или установите фиксированную ширину для изображения */
+    height: 838px;
+    opacity: 0.6;
+    display: block;
+}
+
+.main .main-div-img
+{
+    position: relative;
+}
+
+.img-text {
+    position: absolute;
+    left: 60%; 
+    width: 100%; 
+    color: white; 
+    background: none;
+  }
+  
+  .img-first-text {
+    top: 20%; /* Позиционирование от верха контейнера */
+    font-size: 60px;
+  }
+  
+  .img-second-text {
+    top: 35%; 
+    font-size: 35px;/* Позиционирование ниже первого текста */
+    width: 500px;
+  }
+
+.react-multiple-carousel__arrow::before
+{
+    font-size: 50px;
+    font-weight: 900;
+}
+
+.react-multiple-carousel__arrow
+{
+    background: none;
+}
+
+.react-multiple-carousel__arrow:hover
+{
+    background: none;
+}
+
