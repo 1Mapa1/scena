@@ -109,11 +109,14 @@
     height: 838px;
     opacity: 0.6;
     display: block;
+    object-fit: cover;
+    object-position: 50% 50%;
 }
 
 .main .main-div-img
 {
     position: relative;
+    border-bottom: 3px solid white;
 }
 
 .img-text {
@@ -149,5 +152,171 @@
 .react-multiple-carousel__arrow:hover
 {
     background: none;
+}
+
+
+.main .main-theaters {
+    padding: 60px 100px;
+}
+.main .main-theaters .main-theaters-text
+{
+    font-size: 50px;
+    color: white;
+    padding-bottom: 30px;
+}
+
+.main .main-theaters .filter-button
+{
+    font-size: 22px;
+    padding: 10px 15px;
+    width: max-content;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 30px;
+    border: 4px solid white;
+    text-align: center;
+    color: white;
+
+    transition: background-color 1s, color 1s;
+}
+
+.main .main-theaters .filter-button:hover
+{
+    transition: background-color 1s, color 1s;
+    background-color: white;
+    color: rgb(106, 99, 99);
+}
+
+.main .main-theaters .filter-button.active
+{
+    background-color: white;
+    gap: 20px;
+}
+
+.main .main-theaters .filter-button.multi
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.white-filter
+{
+    background-color: white;
+    color: rgb(106, 99, 99);
+}
+
+.dark-filter
+{
+    background-color: rgb(106, 99, 99);
+    color: white;
+}
+
+.main .main-theaters .filter-button .filter-arrow
+{
+    font-size: 22px;
+}
+
+.main-theaters-filter
+{
+    display: flex;
+}
+
+.main-theater-grid
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 60px;
+    width: 100%;
+    gap: 50px;
+    box-sizing: border-box;
+}
+
+.theater
+{
+    transition: background-color 0.7s ease;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 280px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Moscow-Bolshoi-Theare-1.jpg/274px-Moscow-Bolshoi-Theare-1.jpg'); /* Путь к вашему изображению */
+    background-size: cover; /* Покрыть весь элемент, сохраняя пропорции */
+    background-position: center; /* Центрирование изображения */
+    cursor: pointer;
+}
+
+.theater::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0); /* Изначально прозрачный */
+    transition: background-color 0.7s ease, border 0.7s ease; /* Плавное изменение фона */
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 20px;
+}
+  
+.theater:hover::before {
+background: rgba(0, 0, 0, 0.6); /* Затемнение при наведении */
+border: 2px solid rgba(255, 255, 255, 1);
+
+}
+
+.theater-name, .theater-year, .theater-discription {
+    transition: transform 0.7s ease, opacity 0.7s ease, padding-top 0.7s ease;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 0px 20px;
+    color: white;
+    font-size: 16px;
+}
+
+.theater-name
+{
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    padding: 15px 20px;
+    align-items: center;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    font-size: 20px;
+    transform: translateY(180px);
+}
+
+
+.theater-year, .theater-discription {
+    transform: translateY(180px); /* Смещаем элементы вниз */
+    padding-top: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.theater-year {
+    padding-top: 20px;
+}
+
+.theater:hover .theater-name {
+/* Поднимаем theater-name вверх */
+    transform: translateY(0px);
+    border-bottom: 2px solid white;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-color: rgba(0, 0, 0, 0);
+    padding-top: 50px;
+}
+
+.theater:hover .theater-year, 
+.theater:hover .theater-discription {
+  /* Делаем theater-year и theater-discription видимыми и перемещаем в исходное положение */
+  opacity: 1;
+  transform: translateY(0px);
+  background-color: rgba(0, 0, 0, 0);
 }
 
