@@ -246,7 +246,7 @@
     width: 100%;
     position: relative;
     overflow: hidden;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Moscow-Bolshoi-Theare-1.jpg/274px-Moscow-Bolshoi-Theare-1.jpg'); /* Путь к вашему изображению */
+    /* background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Moscow-Bolshoi-Theare-1.jpg/274px-Moscow-Bolshoi-Theare-1.jpg'); Путь к вашему изображению */
     background-size: cover; /* Покрыть весь элемент, сохраняя пропорции */
     background-position: center; /* Центрирование изображения */
     cursor: pointer;
