@@ -4,7 +4,7 @@ import { FaSearch } from 'react-icons/fa';
 
 const Header = () => {
     return (
-        <header className='header'>
+        <header className='header main-padding'>
             <div className='logo'>
               <p className='header-text'>Сцена</p>
             </div>
