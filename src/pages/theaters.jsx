@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaChevronRight } from 'react-icons/fa';
-import {Header, CarouselHead, MinTheater} from '../components';
+import {Header, CarouselPerformance, MinTheater} from '../components';
 
 const representation = [
     {
@@ -32,7 +32,7 @@ const Theaters = () => {
         <div>
           <Header />
           <main className='main'>
-            <CarouselHead
+            <CarouselPerformance
                 representation={representation}
             />
             <div className='main-theaters'>

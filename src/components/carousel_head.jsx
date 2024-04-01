@@ -1,5 +1,5 @@
 import React from "react";
-import ImgHead from '../components/img_head';
+import {ImgPerformance, ImgTheater } from '../components/img_head';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 const responsive = {
@@ -22,12 +22,12 @@ const responsive = {
     }
   };
 
-const CarouselHead = ({representation}) => {
+export const CarouselPerformance = ({representation}) => {
     return (
         <Carousel responsive={responsive}
             infinite>
             {representation.map((repres, index) => 
-                <ImgHead
+                <ImgPerformance
                     key={index}
                     img={repres.img}
                     head_text={repres.head_text}
@@ -38,4 +38,19 @@ const CarouselHead = ({representation}) => {
     );
 }
 
-export default CarouselHead;
+export const CarouselTheater = ({representation}) => {
+  return (
+      <Carousel responsive={responsive}
+          infinite
+          arrows={false}
+          autoPlay={true}
+          autoPlaySpeed={5000}>
+          {representation.map((repres, index) => 
+              <ImgTheater
+                  key={index}
+                  img={repres.img}
+              />
+          )}
+      </Carousel>
+  );
+}

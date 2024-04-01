@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const ImgHead = ({img, head_text, main_text}) => {
+export const ImgPerformance = ({img, head_text, main_text}) => {
     return (
         <div className='main-div-img'>
             <img
@@ -14,4 +14,13 @@ const ImgHead = ({img, head_text, main_text}) => {
     );
 }
 
-export default ImgHead;
+export const ImgTheater = ({img}) => {
+    return (
+        <div className='main-div-img'>
+            <img
+            className='main-img' 
+            src= {img}>
+            </img>
+        </div>
+    );
+}
