@@ -59,7 +59,7 @@ const Theaters = () => {
                     <MinTheater 
                         key={index}
                         main_text='Государственный академический Большой театр России (Историческая сцена)'
-                        year='1899'
+                        year='Год: 1899'
                         desription='Великий театр великого актера победивший все свои страхи и открывшись собственную школу театрального искуства которая бударажит умы милионнов'
                         backgroundImage='https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Moscow-Bolshoi-Theare-1.jpg/274px-Moscow-Bolshoi-Theare-1.jpg'
                     />

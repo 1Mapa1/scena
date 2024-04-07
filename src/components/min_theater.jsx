@@ -8,11 +8,16 @@ const MinTheater = ({main_text, year, desription, backgroundImage}) => {
 
     return (
         <div className='theater' style={style}>
-            <div className='theater-name'>
-                {main_text}
+            <div className='theater-name' style={{minHeight: '103px'}}>
+                {/* <div style={{backgroundColor: 'transparent'}}> */}
+                    {main_text}
+                {/* </div>
+                <div style={{backgroundColor: 'transparent'}}>
+                    {year}
+                </div> */}
             </div>
             <div className='theater-year'>
-                Год: {year}
+                {year}
             </div>
             <div className='theater-discription'>
                 {desription}
